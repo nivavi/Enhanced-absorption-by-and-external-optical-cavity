@@ -37,25 +37,53 @@ Solar cells are the converters of light's power radiated from the sun into a mor
 Naturally, light trapping methods aiming at surpassing TIR-based approaches have emerged. These mainly rely on the ability to confine electromagnetic radiation at the immediate vicinity of subwavelength structures using plasmonic or photonic effects \cite{Atwater2010a, Polman2012a}. Despite the considerable progress that was achieved so far \cite{Pala2009, Massiot2012}, none of the proposed approaches rivals TIR when it comes to utility and cost-effectiveness. The reason these new approaches fall short has a lot to do with their reliance on wave-optics, which is inherently sensitive to the wavelength, illumination-direction, and polarization of light. Solar cells, on the contrary, feed on broadband, often omnidirectional, and unpolarized natural-light - properties that are best handled using ray-optics.  
 
 Recently, a new approach emerged that has the potential for optical-ray-based trapping even for highly absorbing ultra thin material where traditional TIR-based approaches has failed. In this approach the solar cell is placed inside an external optical device whose sole purpose is light trapping. This approach first emerged as a means of increasing the open circuit voltage in photovoltaics with high external luminescence efficiency \cite{Braun2013_external_recycling}, but it potential for enhancing the absorption and therefore the current was soon appreciated \cite{Weinstein2014a,Weinstein2015b,Niv2016a}, as well as its ability to recover lost reflection losses \cite{VanDijk2016a}. External cavities has, however, the potential for a much deeper paradigm shift in solar cell design as they allow, for the first time, to decouple the cell's electronic and optical functionalists. This fact liberates the cell design to pursue optimal charge separation and transport, while leaving the task of recovering the lost optical absorption to the external optical device \cite{VanDijk2016a}. 
+\par % what have we done
+In this paper we use flux balancing approach to derive close-form expressions for the absorption enhancement of a cell placed inside, or against the wall of, an external cavity. The model considers the area of the cavity, the area of its port, its inner surface reflectively, and the area and absorption of the target cell (denoted henceforth as target). further, it is assumes that complete randomization of the light rays inside the cavity prevail. As we shall later show by comparison with ray optics simulations and experimental measurements, this single assumption places the most severe limitations on the proposed model.
+% what have we found
+\todo{update reconstructed absorption (marked ???)}
+The model shows that a realistic model of external cavity is able to reconstruct ???\% absorption for a cell (target) with native absorption of 50\%.
+\par % manuscript layout
+The paper is organized as follow:
+    % 1. theoretical derivation
+    First, close-form expressions are derived based on balancing the incoming, outgoing, and absorbed optical fluxes of the cavity. The resulting expressions are then used to derive the expected cavity performance for different system parameters such as port are, and target absorptivity.
+    % 2. simulation and its connection with the theory
+    \todo{this is so far a fictional paragraph}
+    Next a cavity is simulated using ray optics model and the results are matched against the analytic model. It shows that the theoretical model is most jeopardized by optical-filed inhomogeneity caused be excess of cavity losses.
+    % 3. experiment and its connection to theory and simulation
+    A real-world evaluation of the model is gotten by constructing a cavity using a $15cm$ diameter spectroscopic integrating sphere. The measured results are in good agreement with simulation. Accordingly, the range of validity of the closed-form expressions is reinforced.
+    % 4. Summery and conclusions
+    Finally, the main findings of our investigation are summed-up and some conclusions are drawn.
+\todo{find out where to speak of analysis models}
 
-In this paper we use flux balancing method in the spirit of the statistical ray optics to derive close form expressions for the absorption enhancement of a cell placed inside or against the wall of an external cavity.
-\listoftodos
-This paper studies the potential of placing a solar cell inside an external cavity. We start with analyzing the potential for enhancement of broadband-light absorption for a piece of material placed inside a cavity and then turn to the  more specific case absorbing material in the form of a solar cell. Figure \ref{fig:system} show a schematic view of the system: Light falls on the concentrator, depicted here as a lens. The concentrator focuses the light onto the entrance port of the cavity. The cavity is a spherical shell made form highly scattering and reflecting material. Moreover  filled with a transparent media with (real) refractive index $n$. Light that enters is therefore randomized by multiple reflection and the chances that a ray that enters finds a way out through the port is the prime objective of this work.  a function of area and wall reflection in the cavity enters the cavity through its port whose size should match the focus light spot that emerges from the concentrator, depicted here as a lens.. Without loss of generality, the concentrator is taken here to be a lens. The question is to what extent the absorption of a target material could be enhanced by being placed inside the cavity, centered or against the wall.
+\par Various forms of flux balancing approaches have been used in the past to analyze the performance of TIR light trapping. In his seminal paper \emp{Statistical ray optics} Yablonovitch has balance the incoming and outgoing fluxes to derive his famous $4n^2$ limit. This is, however, considers only week-absorbing materials \cite{Yablonovitch1982} . An improvement to the model was proposed by Gee \cite{Gee1988}, and later by Green \cite{Green2002}, in the form of two-flux model that can account for the actual absorption along the path length of a ray.
+% talk about the planar layered structure and the four-flux and BDSF formalism's, as well as their shortcomings.
+ 
+\listoftodos\bigskip
+\section{The cavity flux balancing optics}
 
-In the following we develop what should be the light’s intensity on the target for a given cavity parameters of interest such as the geometrical concentration, cavity area, port size, and cavity wall absorptivity. The calculations are based on three assumptions: First we assume that any geometrical dimension of the system, cavity + concentrator, is much larger then the typical optical wavelength involved such that ray optics is valid description of the light. Second, we assume that the light inside the cavity is completely randomized due to multiple reflections of the cavity walls, and third we assume that the external light source is completely coherent. The first allow us use flux-balancing method to derive the expected performance of the cavity.The second allows to neglect the specular (collimated) flux inside the cavity, thus considerably simplifying the analysis. The third allow a simple account of the incoming power. Out of the three, the second is the fragile one. As we shall see later, violation of the second assumption in the form of inhomogeneous intensity inside the cavity leads to some deviation of the measured values relative to the expected ones. Correction factors are the incorporated that brings the predicted and measured values to an excellent agreement.
-
+% introducing the system
+\noindent This paper studies the consequences of placing a solar cell inside an external cavity. We start with analyzing the potential for broadband-light absorption enhancement for a piece of material placed inside a cavity. Figure \ref{fig:sys} gives a schematic view of the system under consideration: Light that falls on the concentrator, depicted here as a lens, is focused onto the entrance port of the cavity. The cavity is a spherical reflecto-scattering shell filled with a transparent media with a (real) refractive index $n$. Light that enters the port is randomized by multiple reflection off the cavity wall. Ideally, the chances that a ray might find its way out is simply the port to wall area fraction. The effect of cavity losses and target absorption on this merit is the main objective of this paper.
+% flux balancing
+\par
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figures/cav3.png}
 \caption{Schematic view of the cavity, target, and concentrator. Fluxes are denoted with red arrows.}
-\label{fig:system}
+\label{fig:sys}
 \end{figure}
 
+%In the following we derive the concentration factor of light inside a cavity. The derivation is based on the assumption that rays are a valid description of light for this case, i.e. the cavity and all of its ports are many wavelength in size. Another assumption is that the light-rays are randomized in their directions due to multiple reflections from the Lambertian (perfectly scattering) cavity walls. Based on the apparatus from Fig. \ref{fig:system}, $P_{in} (W)$, the power entering the cavity is:
+
+\subsection{flux balancing}
+In the following we develop what should be the light’s intensity on the target for a given cavity parameters of interest such as the geometrical concentration, cavity area, port size, and cavity wall absorptivity. The calculations are based on three assumptions: First we assume that any geometrical dimension of the system, cavity + concentrator, is much larger then the typical optical wavelength involved such that ray optics is valid description of the light. Second, we assume that the light inside the cavity is completely randomized due to multiple reflections of the cavity walls, and third we assume that the external light source is completely coherent. The first allow us use flux-balancing method to derive the expected performance of the cavity.The second allows to neglect the specular (collimated) flux inside the cavity, thus considerably simplifying the analysis. The third allow a simple account of the incoming power. Out of the three, the second is the fragile one. As we shall see later, violation of the second assumption in the form of inhomogeneous intensity inside the cavity leads to some deviation of the measured values relative to the expected ones. Correction factors are the incorporated that brings the predicted and measured values to an excellent agreement.
+
+
+
 \section{The cavity optics}\label{sec2}
+
 \subsection{The cavity concentration factor}
 
-In the following we derive the concentration factor of light inside a cavity. The derivation is based on the assumption that rays are a valid description of light for this case, i.e. the cavity and all of its ports are many wavelength in size. Another assumption is that the light-rays are randomized in their directions due to multiple reflections from the Lambertian (perfectly scattering) cavity walls. Based on the apparatus from Fig. \ref{fig:system}, $P_{in} (W)$, the power entering the cavity is:
 
 \begin{equation}\label{eq1}
 P_{in}=IA_{con},
